@@ -18,8 +18,10 @@
       </div>
     <% end %>
       <div class="col-xs-12">
-      <%= image_tag place.photos.last.picture %>
-      <%= place.photos.last.caption %>
-  </div>
+        <% if place.photos.any? %>
+          <%= image_tag place.photos.last.picture %>
+          <%= place.photos.last.caption %>
+        <% end %>
+      </div>
   </div>
 <% end %>
